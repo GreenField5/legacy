@@ -2,8 +2,6 @@ const UserModel = require('../DataModel').users
 const bcrypt = require('bcryptjs')
 //JWT
 const jwt = require('jsonwebtoken');
-const { use } = require('../routes');
-
 exports.signUpUser = async (req, res) => {
     const salt = await bcrypt.genSalt(10)
     const hashedPass = await bcrypt.hash(req.body.userPass, salt)
@@ -11,7 +9,7 @@ exports.signUpUser = async (req, res) => {
     console.log(req.body)
     userMail = req.body.userMail
     userpas = req.body.userPass
-    if (!req.body.userfirstName) {
+    if (!req.body.userName) {
         return res.status(451).send('error')
     }
     if (!userpas) {
@@ -33,18 +31,16 @@ exports.signUpUser = async (req, res) => {
             newuser.userimage = req.body.userimage
             newuser.userPass = hashedPass
             newuser.userNum = req.body.userNum
-            newuser.trips = []
-            newuser.newsLetter = req.body.newsLetter
+            newuser.feedBack = []
+            newuser.favoriteRes = []
             newuser.save((err, saveduse) => {
                 if (err) {
                     console.log(err)
                     return res.status(400).send('error')
                 }
-                // console.log("saving user", saveduse)
                 var token = jwt.sign({ _id: saveduse._id }, process.env.TOKEN_SECRET)
                 res.cookie('authToken', token)
                 return res.status(200).send('created')
-
             })
         }
         else
@@ -83,8 +79,6 @@ exports.loginUser = (req, res) => {
 exports.userlogout = (req, res) => {
     res.cookie('authToken', '')
     res.status(200).send(req.user)
-
-
 }
 
 exports.checkuser = (req, res) => { return (req.user) }

@@ -13,11 +13,11 @@ db.once('open', function () {
 
 //Schemas
 let resturantSchema = mongoose.Schema({
-    resturantName: String,
-    resturantCategory: { type: Array },
-    resturantLocation: String,
-    resturantPhon: String,
-    resturantImg: String,
+    Name: String,
+    categoty: { type: Array },
+    Address: String,
+    Phone: String,
+    Image: String,
     resturantFeedback: { type: Array },
     resturantRate: Number
 })

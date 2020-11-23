@@ -1,42 +1,34 @@
 [
     {
-        "Name": "FastFood",
-        "Image": "https://www.neededforhealth.com/wp-content/uploads/2020/02/fastfood.jpg"
-    },
-    {
-        "Name": "HealthyFood ",
-        "Image": "https://i.pinimg.com/564x/94/7e/a3/947ea396ab646e8b2a3dd86cb0f70635.jpg"
+        "Name": "Fast Food",
+        "Image": "https://i.imgur.com/cG6YlrG.jpg"
     },
     {
         "Name": "Barbecue",
-        "Image": "https://i.pinimg.com/236x/57/21/cf/5721cf5ea65175ec70f5e63c9708ba19.jpg"
-    },
-    {
-        "Name": "Salad",
-        "Image": "https://i.pinimg.com/564x/50/7b/62/507b6235728329efb7f1cbb7a4930e90.jpg"
-    },
-    {
-        "Name": "Drinks",
-        "Image": "https://i.pinimg.com/564x/43/49/96/434996df2b32803da3920a3a8345434c.jpg"
+        "Image": "https://i.imgur.com/Ld99YE6.jpg"
     },
     {
         "Name": "Bakeries",
-        "Image": "https://i.pinimg.com/564x/4a/b6/4b/4ab64b6485a468a82b701172a8aead42.jpg"
+        "Image": "https://i.imgur.com/IiMM33k.jpg"
     },
     {
-        "Name": "Traditional Food",
-        "Image": "https://i.pinimg.com/564x/df/60/12/df6012bfda6763b45e6ebd8ab7781e49.jpg"
+        "Name": "Drinks",
+        "Image": "https://i.imgur.com/z0gj3Nz.jpg"
+    },
+    {
+        "Name": "Healthy Food",
+        "Image": "https://i.imgur.com/7BQNGkX.jpg"
     },
     {
         "Name": "Pasta",
-        "Image": "https://i.pinimg.com/564x/c9/19/af/c919af58ef34f4d83eda7fa49e9a02dc.jpg"
+        "Image": "https://i.imgur.com/BZfPIjH.jpg"
     },
     {
         "Name": "Dessert",
-        "Image": "https://i.pinimg.com/564x/01/c4/8d/01c48d4b45449aa3aa4d357681238640.jpg"
+        "Image": "https://i.imgur.com/hVzMRMz.jpg"
     },
     {
         "Name": "Sea Food",
-        "Image": "https://i.pinimg.com/564x/ce/a6/37/cea6373348f019f1b4f8a2f047d70f6e.jpg"
+        "Image": "https://i.imgur.com/1dqiifQ.jpg"
     }
 ]
