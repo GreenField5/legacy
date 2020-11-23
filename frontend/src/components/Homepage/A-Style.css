@@ -1,3 +1,11 @@
+.containerPop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin: 0;
+  padding:0;
+}
 /* ////////////////////////////////////////////////// */
 /* Footer.css */
 .footer-container {
@@ -381,7 +389,7 @@ video {
 /* Navbar.css */
 .navbar {
     /* 82, 10, 41 */
-      background: linear-gradient(90deg, rgb(82, 10, 41) 0%, rgb(82, 10, 41) 100%);
+      background:#ff9900;
       height: 80px;
       display: flex;
       justify-content: center;
@@ -548,48 +556,3 @@ video {
     }
     
 /* ////////////////////////////////////////////////// */
-/* Button.css */
-:root {
-    --primary: #fff;
-  }
-  
-  .btn {
-    padding: 8px 20px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn--primary {
-    background-color: var(--primary);
-    color: #242424;
-    border: 1px solid var(--primary);
-  }
-  
-  .btn--outline {
-    background-color: transparent;
-    color: #fff;
-    padding: 8px 20px;
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease-out;
-  }
-  
-  .btn--medium {
-    padding: 8px 20px;
-    font-size: 18px;
-  }
-  
-  .btn--large {
-    padding: 12px 26px;
-    font-size: 20px;
-  }
-  
-  .btn--large:hover,
-  .btn--medium:hover {
-    transition: all 0.3s ease-out;
-    background: #FDEDF4;
-    color: #242424;
-    transition: all 0.3s ease-out;
-  }
-  /* ////////////////////////////////////////////////// */
