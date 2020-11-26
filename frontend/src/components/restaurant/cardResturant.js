@@ -12,7 +12,7 @@ class CardResturant extends React.Component {
             count: 0,
             color: 'withe',
             txtcolor: 'black',
-            fav: 'Add to Faviorate'
+            fav: 'Add to Favorite'
         }
         this.addfav = this.addfav.bind(this)
         this.removefav = this.removefav.bind(this)
@@ -38,7 +38,7 @@ class CardResturant extends React.Component {
                         count: 1,
                         color: 'red',
                         txtcolor: "white",
-                        fav: 'Remove from Faviorate'
+                        fav: 'Remove from Favorite'
                     })
                 }
                 else {
@@ -46,7 +46,7 @@ class CardResturant extends React.Component {
                         count: 0,
                         color: 'white',
                         txtcolor: "black",
-                        fav: 'Add to Faviorate'
+                        fav: 'Add to Favorite'
 
                     })
                 }
@@ -87,7 +87,7 @@ class CardResturant extends React.Component {
                     count: 0,
                     color: 'white',
                     txtcolor: "black",
-                    fav: 'Add to Faviorate'
+                    fav: 'Add to Favorite'
                 })
             },
             error: (err) => {
@@ -123,7 +123,7 @@ class CardResturant extends React.Component {
                                 count: 1,
                                 color: 'red',
                                 txtcolor: "white",
-                                fav: 'Remove from Faviorate'
+                                fav: 'Remove from Favorite'
                             })
                         },
                         error: (err) => {
