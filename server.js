@@ -4,7 +4,7 @@ const routers = require('./routes');
 // const cors = require('cors')
 var cookieParser = require('cookie-parser')
 const auth = require('./auth')
-const path = require('path');
+const path = require('./DataModel');
 // const fs = require('fs');
 const bodyParser = require('body-parser');
 

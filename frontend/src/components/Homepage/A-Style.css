@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-.qoute {
-  font-family: 'Dancing Script', cursive;
-  color:#2D1214;
+.containerPop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%
 }
-
 /* ////////////////////////////////////////////////// */
 /* Footer.css */
 .footer-container {
   background-color: #242424;
-  padding: 4rem 0 2rem 0;
+  padding: .01rem 0 .01rem 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -316,16 +317,30 @@ video {
     /* so it does not cover other components */
     z-index: -1;
   }
-  
+  /* .slidehomepage{
+    background-color:!important rgba(241, 239, 239, 0.664);
+    /* opacity: 0.5; */
+   
+  .imageslider{
+    
+      /* padding: 60px; */
+      text-align: center;
+      color: white;
+      font-size: 30px;
+      background-image: url('https://i.imgur.com/osav7ai.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
   .section-container {
     /* to add a picture insted of video */
-    background: url('https://unctad.org/sites/default/files/2020-10/2020-09-08_Palestine-report_1200x675.jpg') center center/cover no-repeat;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
   }
@@ -387,7 +402,7 @@ video {
 /* Navbar.css */
 .navbar {
     /* 82, 10, 41 */
-      background: linear-gradient(90deg, rgb(82, 10, 41) 0%, rgb(82, 10, 41) 100%);
+      background:#ff9900;
       height: 80px;
       display: flex;
       justify-content: center;
@@ -418,7 +433,7 @@ video {
       text-decoration: none !important;
     }
     .navbar-logo :hover {
-      color: rgb(236, 219, 219);
+      color: #ffdfae;
       text-decoration: none !important;
     }
     
@@ -452,7 +467,7 @@ video {
     }
     
     .nav-links:hover {
-      border-bottom: 4px solid #FDEDF4;
+      border-bottom: 4px solid #ffdfae;
       transition: all 0.2s ease-out;
       text-decoration: none ;
       color: #FDEDF4;
@@ -554,48 +569,80 @@ video {
     }
     
 /* ////////////////////////////////////////////////// */
-/* Button.css */
-:root {
-    --primary: #fff;
+
+/* caregory img style */
+.imgstyle {
+  object-fit: cover;
+    object-position: 50% 50%;
+    width: 21vw;
+    height: 14vw;
+    border-radius: 30px ;
+    margin-bottom: 18px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+.fontKaushan{
+  font-family: 'Bangers', cursive;
+  font-size: larger
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Athiti&display=swap');
+.fontcat{
+  font-family: 'Athiti', sans-serif;
+  font-weight: bolder;
+font-size: larger;
+}
+footer {
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: -200px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Marmelad&display=swap');
+.fontvav{
+  font-family: 'Athiti', sans-serif;
+  font-weight: bolder;
+  font-size: large;}
+
+  .homediv{
+    min-height: 100vh
   }
-  
-  .btn {
-    padding: 8px 20px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
+
+  .secimg{
+    background-color: rgba(0, 0, 0, 0.356);
   }
-  
-  .btn--primary {
-    background-color: var(--primary);
-    color: #242424;
-    border: 1px solid var(--primary);
+
+  @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+  .restqo{
+    font-family: 'Homemade Apple', cursive;
   }
-  
-  .btn--outline {
-    background-color: transparent;
-    color: #fff;
-    padding: 8px 20px;
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease-out;
+  .imgstylesearch{
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 14vw;
+    height: 14vw;
+    border-radius: 30px ;
+    margin-bottom: 18px;
   }
-  
-  .btn--medium {
-    padding: 8px 20px;
-    font-size: 18px;
-  }
-  
-  .btn--large {
-    padding: 12px 26px;
-    font-size: 20px;
-  }
-  
-  .btn--large:hover,
-  .btn--medium:hover {
-    transition: all 0.3s ease-out;
-    background: #FDEDF4;
-    color: #242424;
-    transition: all 0.3s ease-out;
-  }
-  /* ////////////////////////////////////////////////// */
+
+  .Bsearch{
+    margin:1rem;
+    margin-top: 0;
+    color:rgb(0, 0, 0);
+    font:bold;
+    width: 13%;
+    background-image:linear-gradient(to right, #f5a52e, #ff5d62);
+    /* border: 2px solid black; */
+    /* border-color: none; */
+    padding:0.6rem;
+    border-radius: 6px;
+    transition-duration: 0.5s;
+    animation: ease-in-out;
+}
+.Bsearch:hover{
+    background-image:linear-gradient(to left, #f5a52e, #ff5d62);
+    transform: scale(1.1);
+    /* border:none; */
+    color:white;
+}

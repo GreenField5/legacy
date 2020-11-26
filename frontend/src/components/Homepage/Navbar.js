@@ -1,59 +1,44 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './A-Style.css';
-import { Button } from './Button';
-
+import $ from 'jquery'
+import React, { useState } from 'react';
 
 function Navbar() {
     const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
-
     const handleClick = () => setClick(!click);
-
     const closeMobileMenu = () => setClick(false);
-
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    };
-
-    useEffect(() => {
-        showButton();
-    }, []);
-
-    window.addEventListener('resize', showButton);
-
     return (
         <>
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        <h3>LAFLEFNE</h3>
+                        <h3 className='fontKaushan'>FoodDose</h3>
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>Home</Link>
+                            <Link to='/Category' className='nav-links fontvav' onClick={closeMobileMenu}>CATEGORIES</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link
-                                to='/trips/'
-                                className='nav-links'
-                                onClick={closeMobileMenu}>Trips</Link>
+                            <Link to='/user' className='nav-links fontvav' onClick={closeMobileMenu} >USER</Link>
                         </li>
-                        <li>
-                            <Link
-                                to='/sign-up'
-                                className='nav-links-mobile'
-                                onClick={closeMobileMenu}>Sign Up</Link>
+                        <li className='nav-item'>
+                            <Link className='nav-links fontvav' onClick={() => {
+                                $.ajax({
+                                    method: 'POST',
+                                    url: '/logout',
+                                    success: (res) => {
+                                        window.location.href = "/"
+                                    },
+                                    error: (err) => {
+                                        console.log(err)
+                                    }
+                                })
+                            }}>SIGN OUT</Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
                 </div>
             </nav>
         </>

@@ -10,25 +10,33 @@ db.on('error', console.error.bind(console, 'connection error'))
 db.once('open', function () {
     console.log('connection to db sucessful')
 })
+
 //Schemas
 let resturantSchema = mongoose.Schema({
-    
+    Name: String,
+    categoty: { type: Array },
+    Address: String,
+    Phone: String,
+    Image: String,
+    resturantFeedback: { type: Array },
+    restaurantRate: Number,
+    Likes: { type: Array }
 })
+
 let userSchema = mongoose.Schema({
     id: { type: Number, unique: true, sparse: true },
     userName: String,
     userMail: String,
     userPass: String,
     userNum: String,
-    trips: [String],
+    favoriteRes: [String],
+    feedBack: { type: Array },
     userimage: String,
-    newsLetter: Boolean
 })
 
-// userSchema.index({ createdBy: 1, name: 1 }, { unique: true });
-let trips = mongoose.model("tripsinfo", resturantSchema);
-let users = mongoose.model("userinfo", userSchema);
+let resturants = mongoose.model("resturInfo", resturantSchema);
+let users = mongoose.model("UserInfo", userSchema);
 
 
 module.exports.users = users
-module.exports.trips = trips
+module.exports.resturants = resturants

@@ -1,66 +1,61 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './A-Style.css';
-import { Button } from './LogoutButton';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Modal } from './SignInModal';
+import { Modal2 } from './SignUpModal';
 
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
 
-function Navbar() {
+function Navbar(props) {
     const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
-
     const handleClick = () => setClick(!click);
-
     const closeMobileMenu = () => setClick(false);
-
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
+    //pop up functions
+    const [showModal, setShowModal] = useState(false);
+    // to open the pop up (toggle between open and close)
+    const openModal = () => {
+        setShowModal(prev => !prev);
     };
-
-    useEffect(() => {
-        showButton();
-    }, []);
-
-    window.addEventListener('resize', showButton);
-
+    //pop up functions
+    const [showModal2, setShowModal2] = useState(false);
+    // to open the pop up (toggle between open and close)
+    const openModal2 = () => {
+        setShowModal2(prev => !prev);
+    };
     return (
         <>
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        <h3>LAFLEFNE</h3>
+                        <h3 className='fontKaushan'>FoodDose</h3>
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>Home</Link>
+                            <Link to='/Category' className='nav-links fontvav' onClick={closeMobileMenu}>CATEGORIES</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link
-                                to='/trips/'
-                                className='nav-links'
-                                onClick={closeMobileMenu}>Trips</Link>
+                            <Link className='nav-links fontvav' onClick={openModal}>SIGN IN</Link>
+                            <Container>
+                                <Modal className='containerPop' showModal={showModal} setShowModal={setShowModal} />
+                            </Container>
                         </li>
                         <li className='nav-item'>
-                            <Link
-                                to='/user'
-                                className='nav-links'
-                                onClick={closeMobileMenu}
-                            >User</Link>
-                        </li>
-                        <li>
-                            <Link
-                                to='/'
-                                className='nav-links-mobile'
-                                onClick={closeMobileMenu}>Log Out</Link>
+                            <Link className='nav-links fontvav' onClick={openModal2}>SIGN UP</Link>
+                            <Container>
+                                <Modal2 showModal={showModal2} setShowModal={setShowModal2} test={props.test} hello={props.hello} />
+                            </Container>
+                            <Link className='nav-links fontvav' onClick={closeMobileMenu}>SIGN UP</Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>LOG OUT</Button>}
                 </div>
             </nav>
         </>
