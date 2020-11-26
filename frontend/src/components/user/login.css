@@ -5,6 +5,13 @@
     object-position: 50% 50%;
 
 }
+.starbutton{
+    display: none;
+}
+.star{
+    cursor: pointer;
+    transition: 200ms;
+}
 
 html, body {
     margin:0px;
@@ -25,6 +32,7 @@ html, body {
 
 .inputhover{
     width: 650px;
+    margin: auto;
 }
 #LoginupSwitch:hover {
     color : rgb(20, 20, 133) !important;
